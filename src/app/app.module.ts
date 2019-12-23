@@ -18,7 +18,9 @@ import { ListComponent } from './list/list.component';
 import { ListService } from './list.service';
 import { FavouriteComponent } from './favourite/favourite.component';
 import { FavouriteService } from './favourite.service';
-import { TitleCaseComponent } from './favourite/title-case/title-case.component';
+import { TitleCaseComponent } from './title-case/title-case.component';
+import { TitleCasePipe } from './title-case/title-case.pipe';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { TitleCaseComponent } from './favourite/title-case/title-case.component'
     PeopleComponent,
     ListComponent,
     FavouriteComponent,
-    TitleCaseComponent
+    TitleCaseComponent,
+    TitleCasePipe    
   ],
   imports: [
     BrowserModule,
