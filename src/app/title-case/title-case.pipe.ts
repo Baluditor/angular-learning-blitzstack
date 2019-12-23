@@ -10,12 +10,7 @@ export class TitleCasePipe implements PipeTransform {
 
     let words = value.split(' ');
     for (var i = 0; i < words.length; i++){
-      if(words[i] == 't'){
-        words[i] = words[i].substr(0,1).toUpperCase()+words[i].substr(1).toLocaleLowerCase();
-      } else {
-        words[i] = words[i].toLowerCase();
+      console.log(words[i]);
       }
     }
-  }
-
 }
