@@ -31,7 +31,7 @@ export class TitleCase3Pipe implements PipeTransform {
       'of',
       'a',
       'is',
-      'a'
+      'an'
     ];
 
     return prepositions.includes(word.toLowerCase());

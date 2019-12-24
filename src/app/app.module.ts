@@ -22,6 +22,8 @@ import { TitleCaseComponent } from './title-case/title-case.component';
 import { TitleCasePipe } from './title-case/title-case.pipe';
 import { TitleCase2Pipe } from './title-case/title-case2.pipe';
 import { TitleCase3Pipe } from './title-case/title-case3.pipe';
+import { MultiplyFunComponent } from './multiply-fun/multiply-fun.component';
+import { PowrToTwoPipe } from './multiply-fun/powr-to-two.pipe';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { TitleCase3Pipe } from './title-case/title-case3.pipe';
     TitleCaseComponent,
     TitleCasePipe,
     TitleCase2Pipe,
-    TitleCase3Pipe    
+    TitleCase3Pipe,
+    MultiplyFunComponent,
+    PowrToTwoPipe    
   ],
   imports: [
     BrowserModule,
