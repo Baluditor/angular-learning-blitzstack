@@ -1,11 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'titleCase2'
+  name: 'titleCase3'
 })
-export class TitleCase2Pipe implements PipeTransform {
+export class TitleCase3Pipe implements PipeTransform {
 
-transform(value: string): any {
+  transform(value: string): any {
     if (!value) return null;
 
     let words = value.split(' ');
