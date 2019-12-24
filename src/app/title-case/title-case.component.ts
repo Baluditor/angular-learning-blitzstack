@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TitleCaseComponent implements OnInit {
   title: string;
-  a: string;
+  title2: string;
 
   constructor() { }
 

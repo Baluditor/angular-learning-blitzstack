@@ -20,6 +20,7 @@ import { FavouriteComponent } from './favourite/favourite.component';
 import { FavouriteService } from './favourite.service';
 import { TitleCaseComponent } from './title-case/title-case.component';
 import { TitleCasePipe } from './title-case/title-case.pipe';
+import { TitleCase2Pipe } from './title-case/title-case2.pipe';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { TitleCasePipe } from './title-case/title-case.pipe';
     ListComponent,
     FavouriteComponent,
     TitleCaseComponent,
-    TitleCasePipe    
+    TitleCasePipe,
+    TitleCase2Pipe    
   ],
   imports: [
     BrowserModule,
