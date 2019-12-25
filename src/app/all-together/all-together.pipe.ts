@@ -8,7 +8,11 @@ export class AllTogetherPipe implements PipeTransform {
   transform(value: any): string {
     if (!value) return null;
 
-    return String(value).substr(0,1).toUpperCase() + value.substr(1).toLowerCase();    
+    return this.prettifyString(valu);    
+  }
+
+  private prettifyString(input: any): string{
+    return String(input).substr(0,1).toUpperCase() + input.substr(1).toLowerCase()
   }
 
 }
