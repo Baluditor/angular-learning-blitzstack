@@ -6,10 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./favourite.component.css']
 })
 export class FavouriteComponent implements OnInit {
-  isFavorite: boolean;
-   
-  //icon =  "glyphicon glyphicon-star-empty";
- 
+  @Input() isFavorite: boolean;
+
   onClick(){    
     this.isFavorite = !this.isFavorite;
   } 
