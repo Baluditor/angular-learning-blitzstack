@@ -1,3 +1,12 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<div>
+  <span class="glyphicon"
+  [class.glyphicon-star] = "isFavorite"
+  [class.glyphicon-star-empty] = "!isFavorite"
+  (click)="onClick()"></span>
+</div>
+  
+
 <p>
 favourite works!
 </p>

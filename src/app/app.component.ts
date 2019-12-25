@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'home-angular-learning';
+  post = {
+    title: "Title",
+    isFavorite: true
+  }
 }
