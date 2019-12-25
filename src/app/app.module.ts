@@ -26,6 +26,7 @@ import { MultiplyFunComponent } from './multiply-fun/multiply-fun.component';
 import { PowrToTwoPipe } from './multiply-fun/powr-to-two.pipe';
 import { AllTogetherComponent } from './all-together/all-together.component';
 import { AllTogetherService } from './all-together/all-together.service';
+import { AllTogetherPipe } from './all-together/all-together.pipe';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AllTogetherService } from './all-together/all-together.service';
     TitleCase3Pipe,
     MultiplyFunComponent,
     PowrToTwoPipe,
-    AllTogetherComponent    
+    AllTogetherComponent,
+    AllTogetherPipe    
   ],
   imports: [
     BrowserModule,

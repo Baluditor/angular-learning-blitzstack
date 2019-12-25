@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<p>
+<input type="text" [(ngModel)] = "allTogether"/>
+<button [class] = "buttonClass" (click)="onClick()">Prettify</button>
+</p>
+<p [class] = "outPutP">{{allTogether | allTogether}}</p>
+
