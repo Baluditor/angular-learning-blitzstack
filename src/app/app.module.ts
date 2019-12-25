@@ -24,6 +24,8 @@ import { TitleCase2Pipe } from './title-case/title-case2.pipe';
 import { TitleCase3Pipe } from './title-case/title-case3.pipe';
 import { MultiplyFunComponent } from './multiply-fun/multiply-fun.component';
 import { PowrToTwoPipe } from './multiply-fun/powr-to-two.pipe';
+import { AllTogetherComponent } from './all-together/all-together.component';
+import { AllTogetherService } from './all-together/all-together.service';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { PowrToTwoPipe } from './multiply-fun/powr-to-two.pipe';
     TitleCase2Pipe,
     TitleCase3Pipe,
     MultiplyFunComponent,
-    PowrToTwoPipe    
+    PowrToTwoPipe,
+    AllTogetherComponent    
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { PowrToTwoPipe } from './multiply-fun/powr-to-two.pipe';
     BooksService,
     PeopleService,
     ListService,
-    FavouriteService
+    FavouriteService,
+    AllTogetherService
   ],
   bootstrap: [AppComponent]
 })
