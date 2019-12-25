@@ -8,7 +8,7 @@ export class AllTogetherPipe implements PipeTransform {
   transform(value: any): string {
     if (!value) return null;
 
-    return this.prettifyString(valu);    
+    return this.prettifyString(value);    
   }
 
   private prettifyString(input: any): string{
