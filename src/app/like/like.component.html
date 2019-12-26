@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<p>
+like works!
+</p>
+
+<button type="button"
+class="btn"
+[class.btn-success]="liked"
+[class.btn-primary]="!liked"
+(click)="onClick()"
+>{{text}}</button>

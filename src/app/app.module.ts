@@ -27,6 +27,7 @@ import { PowrToTwoPipe } from './multiply-fun/powr-to-two.pipe';
 import { AllTogetherComponent } from './all-together/all-together.component';
 import { AllTogetherService } from './all-together/all-together.service';
 import { AllTogetherPipe } from './all-together/all-together.pipe';
+import { LikeComponent } from './like/like.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { AllTogetherPipe } from './all-together/all-together.pipe';
     MultiplyFunComponent,
     PowrToTwoPipe,
     AllTogetherComponent,
-    AllTogetherPipe    
+    AllTogetherPipe,
+    LikeComponent    
   ],
   imports: [
     BrowserModule,
