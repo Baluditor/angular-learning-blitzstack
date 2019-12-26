@@ -1,0 +1,19 @@
+<p>
+post works!
+</p>
+
+<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="comment" [(ngModel)]="postText" ></textarea>
+</div>
+<button type="button"
+class="btn"
+[class.btn-success]="posted"
+[class.btn-primary]="!posted"
+(click)="onClickPost()">{{buttonText}}</button>
+
+<button
+class="btn btn-danger"
+(click)="onClickDelete()"> Delete </button>
+
+<p [class]="formattedPost" > {{postText | post}} </p>

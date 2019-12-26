@@ -28,6 +28,9 @@ import { AllTogetherComponent } from './all-together/all-together.component';
 import { AllTogetherService } from './all-together/all-together.service';
 import { AllTogetherPipe } from './all-together/all-together.pipe';
 import { LikeComponent } from './like/like.component';
+import { PostComponent } from './post/post.component';
+import { PostService } from './post/post.service';
+import { PostPipe } from './post/post.pipe';
 
 
 @NgModule({
@@ -48,7 +51,9 @@ import { LikeComponent } from './like/like.component';
     PowrToTwoPipe,
     AllTogetherComponent,
     AllTogetherPipe,
-    LikeComponent    
+    LikeComponent,
+    PostComponent,
+    PostPipe    
   ],
   imports: [
     BrowserModule,
@@ -62,7 +67,8 @@ import { LikeComponent } from './like/like.component';
     PeopleService,
     ListService,
     FavouriteService,
-    AllTogetherService
+    AllTogetherService,
+    PostService
   ],
   bootstrap: [AppComponent]
 })
