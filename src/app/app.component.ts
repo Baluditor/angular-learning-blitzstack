@@ -15,4 +15,9 @@ export class AppComponent {
     title: "Facebook Post Title",
     liked: false
   }
+
+  onFavoriteChange(eventArgs){
+    console.log('Favorite changed', eventArgs);
+  }
+
 }
