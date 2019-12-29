@@ -33,6 +33,7 @@ import { PostService } from './post/post.service';
 import { PostPipe } from './post/post.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
+import { SzeretetComponent } from './szeretet/szeretet.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { LikesComponent } from './likes/likes.component';
     PostComponent,
     PostPipe,
     PanelComponent,
-    LikesComponent    
+    LikesComponent,
+    SzeretetComponent    
   ],
   imports: [
     BrowserModule,
