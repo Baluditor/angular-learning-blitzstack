@@ -21,4 +21,7 @@
 </bootstrap-panel>
 -->
 
-<app-likes></app-likes>
+<app-likes
+[likesCount]="tweet.likesCount"
+[isSelected]='tweet.isFavorite'
+></app-likes>
