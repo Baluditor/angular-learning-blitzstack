@@ -34,6 +34,7 @@ import { PostPipe } from './post/post.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
 import { SzeretetComponent } from './szeretet/szeretet.component';
+import { ValamiszarComponent } from './valamiszar/valamiszar.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { SzeretetComponent } from './szeretet/szeretet.component';
     PostPipe,
     PanelComponent,
     LikesComponent,
-    SzeretetComponent    
+    SzeretetComponent,
+    ValamiszarComponent    
   ],
   imports: [
     BrowserModule,
