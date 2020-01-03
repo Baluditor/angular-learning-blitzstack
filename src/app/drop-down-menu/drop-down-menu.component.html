@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="drop-down">
+	<div
+    class="drop-down-header"
+    [class.expanded]='isExpended' 
+    (click) = "toggle()"
+        >
+    {{title}}
+    <span
+    class="glyphicon"
+    [ngClass] = "{
+      'glyphicon-chevron-down': !isExpanded,
+      'glyphicon-chevron-up': isExpanded
+    }"
+    ></span>
+  </div>
+a
+	<div *ngIf="isExpanded" class="drop-down-body"><ng-content></ng-content></div>
+</div>

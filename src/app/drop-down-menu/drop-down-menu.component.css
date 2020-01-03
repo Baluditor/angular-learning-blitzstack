@@ -1,0 +1,28 @@
+.drop-down{
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.drop-down-header{
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.zippy-heading{
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.drop-down-body{
+  padding: 20px;
+}
+
+.expanded{
+  background-color: #f0f0f0;
+}
+
+.glyphicon{
+  float: right;  
+}

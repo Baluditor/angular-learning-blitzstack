@@ -6,5 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./drop-down-menu.component.css']
 })
 export class DropDownMenuComponent {
+  @Input('title') title: string;
+  isExpanded: boolean = false;
+
+
+  toggle(){
+    this.isExpanded = !this.isExpanded;
+  }
 
 }
