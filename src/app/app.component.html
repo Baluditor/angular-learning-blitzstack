@@ -46,8 +46,8 @@
 <!-- ngIf-->
 
 <!-- hidden-->
-<div [hidden]="animals.length == 0">List of animals</div>
-<div [hidden]="animals.length > 0">No animals</div>
+<div [hidden]="dogs.length == 0">List of animals</div>
+<div [hidden]="dogs.length > 0">No animals</div>
 <!-- hidden-->
 
 <!-- ngSwitchCase more then 2 valuse (in case of 2 valuse ngIf-->
@@ -64,11 +64,26 @@
 
 <!-- ngFor + change detection ( in the documentation it's called NgForOf directive )-->
 <button (click)="onAdd()">Add</button>
-<button (click)="onRemove()">Remove</button>
+<!--<button (click)="onRemove()">Remove last</button>-->
 <ul>
 	<li *ngFor="let course of forCourses; index as i; even as isEven">
-    {{i+1}} - {{ course.name}} <span *ngIf="isEven">EVEN</span>
+    {{i+1}} - {{ course.name}} 
+    <span *ngIf="isEven">EVEN</span> 
+    <button (click)="onRemoveThis(course)">Remove this</button>
+    <button (click)="onChange(course)">Change</button>
   </li>
 </ul>
 
 <!-- ngFor -->
+
+<!-- ngFor and TrackBy for LONG list and complex display -->
+
+<br>
+<button (click)="loadAnimals()">Load Animals</button>
+<ul>
+	<li *ngFor="let animal of animals; trackBy: trackAnimal">
+    {{animal.name}}
+  </li>
+</ul>
+
+<!-- ngFor and TrackBy -->
