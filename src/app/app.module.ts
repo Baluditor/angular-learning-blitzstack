@@ -39,6 +39,7 @@ import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
 import { DropDownMenuComponent } from './drop-down-menu/drop-down-menu.component';
 import { DdComponent } from './dd/dd.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { DdComponent } from './dd/dd.component';
     InputFormatDirective,
     ZippyComponent,
     DropDownMenuComponent,
-    DdComponent    
+    DdComponent,
+    ContactFormComponent    
   ],
   imports: [
     BrowserModule,
