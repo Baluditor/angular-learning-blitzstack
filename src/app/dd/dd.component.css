@@ -1,0 +1,22 @@
+.dd{
+  border: 1px solid blueviolet;
+  border-radius: 2px;
+}
+
+.dd-header{
+  background: #ccc;
+  font-weight: bold;  
+}
+
+.dd-body{
+  background: #f0f0f0f0;
+}
+
+.expanded{
+  font-weight: normal;
+  color: antiquewhite;
+}
+
+.glyphicon{
+  float: right;
+}

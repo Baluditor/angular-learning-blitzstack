@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div class="dd">
+	<div 
+    class="dd-header"
+    (click) = "toggle()"
+    [class.expanded] = "toggled"
+    >{{title}}
+  <span
+  class ="glyphicon"
+  [ngClass]="{
+    'glyphicon-chevron-down': !toggled,
+    'glyphicon-chevron-up': toggled
+  }"
+  
+  ></span></div>
+	<div class="dd-body" *ngIf="toggled" ><ng-content></ng-content></div>
+</div>

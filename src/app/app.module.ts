@@ -38,6 +38,7 @@ import { ValamiszarComponent } from './valamiszar/valamiszar.component';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from './zippy/zippy.component';
 import { DropDownMenuComponent } from './drop-down-menu/drop-down-menu.component';
+import { DdComponent } from './dd/dd.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { DropDownMenuComponent } from './drop-down-menu/drop-down-menu.component
     ValamiszarComponent,
     InputFormatDirective,
     ZippyComponent,
-    DropDownMenuComponent    
+    DropDownMenuComponent,
+    DdComponent    
   ],
   imports: [
     BrowserModule,
