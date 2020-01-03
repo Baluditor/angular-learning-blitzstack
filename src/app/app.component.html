@@ -34,13 +34,13 @@
   [counter]="tweet.likesCount"
   [state]="tweet.isFavorite">
 </app-valamiszar>-->
-
-<!-- ngClass-->
+<!--
+<!-- ngClass
 <app-favourite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-favourite>
 <!-- ngClass-->
 
-<!-- ngIf-->
-<div *ngIf="courses.length > 0; then coursesList else noCourses"> <!-- this can be a method here doWeHaveAnyCourses() --></div>
+<!-- ngIf
+<div *ngIf="courses.length > 0; then coursesList else noCourses"> <!-- this can be a method here doWeHaveAnyCourses() </div>
 <ng-template #coursesList>
   List of courses
 </ng-template>
@@ -49,12 +49,12 @@
 </ng-template>
 <!-- ngIf-->
 
-<!-- hidden-->
+<!-- hidden--
 <div [hidden]="dogs.length == 0">List of animals</div>
 <div [hidden]="dogs.length > 0">No animals</div>
 <!-- hidden-->
 
-<!-- ngSwitchCase more then 2 valuse (in case of 2 valuse ngIf-->
+<!-- ngSwitchCase more then 2 valuse (in case of 2 valuse ngIf--
 <ul class="nav nav-pills">
 	<li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'">Map View</a></li>
 	<li [class.active]="viewMode == 'list'"><a (click)="viewMode = 'list'">List View</a></li>
@@ -66,7 +66,7 @@
 </div>
 <!-- ngSwitchCase -->
 
-<!-- ngFor + change detection ( in the documentation it's called NgForOf directive )-->
+<!-- ngFor + change detection ( in the documentation it's called NgForOf directive )--
 <button (click)="onAdd()">Add</button>
 <button (click)="onRemove()">Remove last</button>
 <ul>
@@ -80,7 +80,7 @@
 
 <!-- ngFor -->
 
-<!-- ngFor and TrackBy for LONG list and complex markup -->
+<!-- ngFor and TrackBy for LONG list and complex markup --
 
 <br>
 <button (click)="loadAnimals()">Load Animals</button>
@@ -93,7 +93,7 @@
 <!-- ngFor and TrackBy -->
 
 
-<!-- ngStyle -->
+<!-- ngStyle --
 <button
   [ngStyle]="{
     'backgroundColor': canSave ? 'blue' : 'gray',
@@ -106,21 +106,28 @@ Save
 <!-- ngStyle -->
 <br>
 <br>
-<!-- Safe Traversal Operator for complex objects if we are not sure we have a value or we might get it late -->
+<!-- Safe Traversal Operator for complex objects if we are not sure we have a value or we might get it late --
 <span *ngIf="task.assignee">{{task.assignee.name}}</span>
 <br>
 <span>{{task.assignee?.name}}</span>
 <!-- Safe Traversal Operator -->
 <br>
 <br>
-<!-- custom directives (such as for formatting text in input boxes) -->
+<!-- custom directives (such as for formatting text in input boxes) --
 <input type="text" appInputFormat [format]="uppercase">
 <!-- custom directives (such as for formatting text in input boxes) -->
 <br>
 <br>
+
+<!-- zippy task
 <app-zippy title="Shipping Details">
   Shipping Details Content
 </app-zippy>
 <app-zippy title="Billing Details">
   Billing Details Content
 </app-zippy>
+<br><br> -->
+
+<drop-down-menu title="Click to expand">
+  Expand succseeful
+</drop-down-menu>
