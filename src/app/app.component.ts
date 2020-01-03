@@ -66,4 +66,13 @@ export class AppComponent {
     return animal ? animal.id : undefined;
   }
 
+  canSave = true;
+
+  task = {
+    title: 'Review Task',
+    assignee: {
+      name: 'John Smith'
+    }
+  }
+
 }

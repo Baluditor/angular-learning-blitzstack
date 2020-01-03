@@ -35,6 +35,8 @@ import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
 import { SzeretetComponent } from './szeretet/szeretet.component';
 import { ValamiszarComponent } from './valamiszar/valamiszar.component';
+import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from './zippy/zippy.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { ValamiszarComponent } from './valamiszar/valamiszar.component';
     PanelComponent,
     LikesComponent,
     SzeretetComponent,
-    ValamiszarComponent    
+    ValamiszarComponent,
+    InputFormatDirective,
+    ZippyComponent    
   ],
   imports: [
     BrowserModule,

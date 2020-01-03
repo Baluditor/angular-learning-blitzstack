@@ -31,10 +31,14 @@
 ></app-szeretet>
 <br>
 <app-valamiszar
-[counter]="tweet.likesCount"
-[state]="tweet.isFavorite"
-></app-valamiszar>-->
+  [counter]="tweet.likesCount"
+  [state]="tweet.isFavorite">
+</app-valamiszar>-->
+
+<!-- ngClass-->
 <app-favourite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-favourite>
+<!-- ngClass-->
+
 <!-- ngIf-->
 <div *ngIf="courses.length > 0; then coursesList else noCourses"> <!-- this can be a method here doWeHaveAnyCourses() --></div>
 <ng-template #coursesList>
@@ -64,7 +68,7 @@
 
 <!-- ngFor + change detection ( in the documentation it's called NgForOf directive )-->
 <button (click)="onAdd()">Add</button>
-<!--<button (click)="onRemove()">Remove last</button>-->
+<button (click)="onRemove()">Remove last</button>
 <ul>
 	<li *ngFor="let course of forCourses; index as i; even as isEven">
     {{i+1}} - {{ course.name}} 
@@ -87,3 +91,31 @@
 </ul>
 
 <!-- ngFor and TrackBy -->
+
+
+<!-- ngStyle -->
+<button
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue' : 'gray',
+    'color': canSave ? 'white' : 'gray',
+    'fontWeight': canSave ? 'bold' : 'normal'
+  }"
+>
+Save
+</button>
+<!-- ngStyle -->
+<br>
+<br>
+<!-- Safe Traversal Operator for complex objects if we are not sure we have a value or we might get it late -->
+<span *ngIf="task.assignee">{{task.assignee.name}}</span>
+<br>
+<span>{{task.assignee?.name}}</span>
+<!-- Safe Traversal Operator -->
+<br>
+<br>
+<!-- custom directives (such as for formatting text in input boxes) -->
+<input type="text" appInputFormat [format]="uppercase">
+<!-- custom directives (such as for formatting text in input boxes) -->
+<br>
+<br>
+
