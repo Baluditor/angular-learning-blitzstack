@@ -22,7 +22,7 @@
 <app-likes
 [likesCount]="tweet.likesCount"
 [isSelected]='tweet.isFavorite'
-></app-likes>-->
+></app-likes>
 
 <app-szeretet
 [tetszikSzamlalo]="tweet.likesCount"
@@ -32,4 +32,12 @@
 <app-valamiszar
 [counter]="tweet.likesCount"
 [state]="tweet.isFavorite"
-></app-valamiszar>
+></app-valamiszar>-->
+
+<div *ngIf="courses.length > 0; then coursesList else noCourses"> <!-- this can be a method here doWeHaveAnyCourses() --></div>
+<ng-template #coursesList>
+  List of courses
+</ng-template>
+<ng-template #noCourses>
+  No Courses
+</ng-template>
