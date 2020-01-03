@@ -12,7 +12,7 @@
 <app-all-together></app-all-together>
 <app-post></app-post>
 
-<app-favourite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-favourite>
+
 <bootstrap-panel>
   <ng-container class="heading">Heading</ng-container>
   <div class="body">
@@ -34,7 +34,7 @@
 [counter]="tweet.likesCount"
 [state]="tweet.isFavorite"
 ></app-valamiszar>-->
-
+<app-favourite [isFavorite]="post.isFavorite" (change)="onFavoriteChange($event)"></app-favourite>
 <!-- ngIf-->
 <div *ngIf="courses.length > 0; then coursesList else noCourses"> <!-- this can be a method here doWeHaveAnyCourses() --></div>
 <ng-template #coursesList>

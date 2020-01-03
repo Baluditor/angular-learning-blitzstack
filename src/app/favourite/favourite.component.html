@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <div>
-  <span class="glyphicon"
-  [class.glyphicon-star] = "isSelected"
-  [class.glyphicon-star-empty] = "!isSelected"
-  (click)="onClick()"></span>  
+  <span 
+    class="glyphicon"
+    [ngClass]="{'glyphicon-star': isSelected, 'glyphicon-star-empty': !isSelected}"
+    (click)="onClick()">
+  </span>  
 </div>
