@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="zippy">
+	<div
+    class="zippy-heading"
+    [class.expanded]='isExpended'
+    (click) = "toggle()"
+    >
+    {{title}}
+    <span class="glyphicon"
+    [ngClass]="{
+      'glyphicon-chevron-down': !isExpended,
+      'glyphicon-chevron-up': isExpended
+    }"
+    ></span>
+  </div>
+	<div *ngIf="isExpended" class="zippy-body"><ng-content></ng-content></div>
+</div>
