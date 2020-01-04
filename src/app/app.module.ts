@@ -40,6 +40,7 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { DropDownMenuComponent } from './drop-down-menu/drop-down-menu.component';
 import { DdComponent } from './dd/dd.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { CourseFormComponent } from './course-form/course-form.component';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     ZippyComponent,
     DropDownMenuComponent,
     DdComponent,
-    ContactFormComponent    
+    ContactFormComponent,
+    CourseFormComponent    
   ],
   imports: [
     BrowserModule,
