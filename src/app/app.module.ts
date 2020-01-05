@@ -3,7 +3,7 @@ import { BooksService } from './books.service';
 import { AuthorsService } from './authors.service';
 import { EmailService } from './email.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -41,6 +41,8 @@ import { DropDownMenuComponent } from './drop-down-menu/drop-down-menu.component
 import { DdComponent } from './dd/dd.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CourseFormComponent } from './course-form/course-form.component';
+import { SignupFormComponent } from './signup-form/signup-form.component';
+
 
 
 @NgModule({
@@ -72,11 +74,14 @@ import { CourseFormComponent } from './course-form/course-form.component';
     DropDownMenuComponent,
     DdComponent,
     ContactFormComponent,
-    CourseFormComponent    
+    CourseFormComponent,
+    SignupFormComponent    
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [
     CoursesService,
