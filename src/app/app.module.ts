@@ -42,6 +42,7 @@ import { DdComponent } from './dd/dd.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 
 
@@ -75,7 +76,8 @@ import { SignupFormComponent } from './signup-form/signup-form.component';
     DdComponent,
     ContactFormComponent,
     CourseFormComponent,
-    SignupFormComponent    
+    SignupFormComponent,
+    ChangePasswordComponent    
   ],
   imports: [
     BrowserModule,
