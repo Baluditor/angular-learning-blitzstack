@@ -18,7 +18,7 @@ export class AppComponent {
     liked: false
   }
 
-  courses = [1,2,3] 
+  courses = [1,2,3];
 
 
   viewMode = "something else";
