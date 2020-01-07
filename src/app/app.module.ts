@@ -4,8 +4,8 @@ import { AuthorsService } from './authors.service';
 import { EmailService } from './email.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +30,7 @@ import { AllTogetherService } from './all-together/all-together.service';
 import { AllTogetherPipe } from './all-together/all-together.pipe';
 
 import { PostComponent } from './post/post.component';
-import { PostService } from './post/post.service';
+import { PostService } from './services/post.service';
 import { PostPipe } from './post/post.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikesComponent } from './likes/likes.component';
@@ -45,6 +45,10 @@ import { CourseFormComponent } from './course-form/course-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { PostsComponent } from './posts/posts.component';
+import { AppErrorHandler } from './common/app-error-handler';
+import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { GithubFollowersService } from './services/github-followers.service';
+
 
 
 
@@ -81,13 +85,14 @@ import { PostsComponent } from './posts/posts.component';
     CourseFormComponent,
     SignupFormComponent,
     ChangePasswordComponent,
-    PostsComponent
+    PostsComponent,
+    GithubFollowersComponent
     ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule,
+    HttpClientModule,
 
   ],
   providers: [
@@ -99,7 +104,9 @@ import { PostsComponent } from './posts/posts.component';
     ListService,
     FavouriteService,
     AllTogetherService,
-    PostService
+    PostService,
+    { provide: ErrorHandler, useClass: AppErrorHandler},
+    GithubFollowersService
   ],
   bootstrap: [AppComponent]
 })
