@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FavoriteChangeEventArgs } from './favorite/favorite.component';
 
 
 @Component({
@@ -19,11 +18,8 @@ export class AppComponent {
     liked: false
   }
 
-  courses = [1,2,3]  
+  courses = [1,2,3] 
 
-  onFavoriteChange(eventArgs: FavoriteChangeEventArgs){
-    console.log('Favorite changed', eventArgs);
-  }
 
   viewMode = "something else";
 
