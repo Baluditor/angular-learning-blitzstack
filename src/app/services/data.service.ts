@@ -17,17 +17,17 @@ export class DataService {
     console.log(message);
   }
 
-  getAll2() {
+  getAll() {
     return this.http.get<any[]>(this.url).
     pipe(
       map(response => response),
-      catchError(this.handleError))
+      catchError(this.handleError));
   }
 
-  getAll(): Observable<any[]> {
+  getAll2(): Observable<any[]> {
     return this.http.get<any[]>(this.url)
     .pipe(
-        map(response =>{
+        map(response => {
             return response;
         }),
         catchError(this.handleError2<any[]>([]))
@@ -58,22 +58,22 @@ export class DataService {
 
   private handleError(error: Response) {
     if (error.status === 400) {
-      return Observable.throw(new BadInput(error.json()));
+      return throwError(new BadInput(error.json()));
     }
 
-    if (error.status === 400) {
-      return Observable.throw(new NotFoundError());
+    if (error.status === 404) {
+      return throwError(new NotFoundError());
     }
-    return Observable.throw(new AppError(error));
+    return throwError(new AppError(error));
   }
 
   private handleError2<T>(result?: T) {
     return (error: any): Observable<T> => {
       // TODO: send the error to remote logging infrastructure
-      console.error(error); // log to console instead      
-        return Observable.throw(new NotFoundError)
+      console.error(error); // log to console instead
+      return throwError(new NotFoundError()) ;
       // Let the app keep running by returning an empty result.
-      //return of(result as T);
+      // return of(result as T);
     };
   }
 

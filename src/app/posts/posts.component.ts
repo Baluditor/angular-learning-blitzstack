@@ -3,6 +3,7 @@ import { PostService } from './../services/post.service';
 import { AppError } from './../common/app-error';
 import { NotFoundError } from '../common/not-found-error';
 import { BadInput } from './../common/bad-input';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-posts',
@@ -38,7 +39,7 @@ export class PostsComponent implements OnInit {
         this.posts.splice(0, 1); // if something went wrong during optimistic update, remove the post
 
         if (error instanceof BadInput) {
-          //this.form.setError(error.origianlError);
+          // this.form.setError(error.origianlError);
         } else {
          throw error;
         }
@@ -53,8 +54,8 @@ export class PostsComponent implements OnInit {
     // this.http.put(this.url, JSON.stringify(post)) to replace the whole object, patch is to replace only som fields;
   }
 
-  deletePost(post) {
-    let index = this.posts.indexOf(post);
+  deletePost2(post) {
+    const index = this.posts.indexOf(post);
     this.posts.splice(index, 1);
 
     this.service.delete(post.id)
@@ -67,6 +68,25 @@ export class PostsComponent implements OnInit {
         } else {
           throw error;
         }
+    });
+  }
+
+  deletePost(post) {
+    const index = this.posts.indexOf(post);
+    this.posts.splice(index, 1);
+
+    this.service.delete(post.id)
+    .subscribe({
+      next: null,
+      error: (e: AppError)   =>{
+        this.posts.splice(index, 0, post);
+        if (e instanceof NotFoundError) {
+          alert('Post already deleted');
+        } else {
+          throw e;
+        }
+      }
+
     });
   }
 

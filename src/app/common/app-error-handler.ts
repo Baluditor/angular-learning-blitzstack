@@ -3,7 +3,7 @@ import { ErrorHandler } from '@angular/core';
 
 export class AppErrorHandler implements ErrorHandler {
     handleError(error) {
-        alert('An unexpeted error occured.');
+        alert('An unexpeted error occured, bazdmeg.');
         console.log(error);
     }
 }
