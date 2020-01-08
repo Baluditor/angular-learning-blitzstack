@@ -18,8 +18,12 @@ export class PostsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getAll()
+    this.service.getAll2()
     .subscribe(posts => this.posts = posts);
+  }
+
+  showId() {
+
   }
 
   createPost(input: HTMLInputElement) {
@@ -54,39 +58,22 @@ export class PostsComponent implements OnInit {
     // this.http.put(this.url, JSON.stringify(post)) to replace the whole object, patch is to replace only som fields;
   }
 
-  deletePost2(post) {
-    const index = this.posts.indexOf(post);
-    this.posts.splice(index, 1);
-
-    this.service.delete(post.id)
-    .subscribe(
-      null,
-      (error: AppError) => {
-        this.posts.splice(index, 0, post);
-        if (error instanceof NotFoundError) {
-          alert('This post have been deleted already');
-        } else {
-          throw error;
-        }
-    });
-  }
-
   deletePost(post) {
     const index = this.posts.indexOf(post);
+    console.log(index);
     this.posts.splice(index, 1);
-
+    console.log('Post id' + post.id);
     this.service.delete(post.id)
     .subscribe({
       next: null,
-      error: (e: AppError)   =>{
+      error: (e: AppError)   => {
         this.posts.splice(index, 0, post);
         if (e instanceof NotFoundError) {
           alert('Post already deleted');
         } else {
-          throw e;
+          throwError(e);
         }
       }
-
     });
   }
 
